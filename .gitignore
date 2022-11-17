@@ -1,6 +1,8 @@
 /node_modules
 
 # this folder created when you run package.json ===> last script
+# for some reason... this is ignored by gitignore... WHY ???????????
+# okay... not its ignored... lib_compiledJs ===> is ignored... it wont be pushed into github anymore
 /lib_compiledJs
 
 # this folder created when u run babel thingies in resources folder
