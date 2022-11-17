@@ -1,0 +1,19 @@
+{
+  "name": "gopal612-tslib23",
+  "version": "1.0.1",
+  "description": "typescript library",
+  "main": "entryFile_to_libr99.js",
+  "files": [
+    "src/*"
+  ],
+  "scripts": {},
+  "author": "GopAL",
+  "license": "ISC",
+  "dependencies": {
+    "atob": "^2.1.2",
+    "btoa": "^1.2.1"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.9"
+  }
+}
