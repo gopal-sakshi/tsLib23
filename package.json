@@ -2,16 +2,28 @@
     "name": "gopal612-tslib23",
     "version": "1.1.0",
     "description": "typescript library",
-    "main": "entryFile_to_libr99.js",
-    "scripts": {},
+    "main": "lib_compiledJs/entryFile_to_libr99.js",
+    "scripts": {
+        "generate_js_tsc": "tsc",
+        "readMe_0": "generate_js_tsc will generate js files directly... not just .d.ts files",
+        "1--": "----------------------------------------------------------------------------------------------------------------",
+        "generate_d.ts": "tsc --emitDeclarationOnly",
+        "readMe_1": "generate_d.ts will only generate ====> .d.ts files ====> bcoz emitDeclarationOnly; declartion:true must be set in tsconfig.json",
+        "2--": "----------------------------------------------------------------------------------------------------------------",
+        "babel23": "babel src -d lib_compiledJs --extensions \".ts\"",
+        "readMe_2": "this script will generate .js files for all corresponding .d.ts files",
+        "3--": "----------------------------------------------------------------------------------------------------------------",
+        "tsc_with_d_and_babel23": "npm run generate_d.ts && npm run babel"
+    },
     "author": "GopAL",
     "license": "ISC",
     "dependencies": {
-      "atob": "^2.1.2",
-      "btoa": "^1.2.1"
+        "atob": "^2.1.2",
+        "btoa": "^1.2.1"
     },
     "devDependencies": {
-      "@types/node": "^18.11.9"
+        "@babel/core": "^7.20.2",
+        "@types/node": "^18.11.9",
+        "babel-cli": "^6.26.0"
     }
-  }
-  
+}

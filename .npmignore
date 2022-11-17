@@ -1,2 +1,9 @@
 /node_modules
 /resources
+
+# why should we push src folder in npmjs package...
+# anyway, it will not be used...
+# so, we will simply not add src folder in npmjs package
+# instead, we will use lib_compiledJs folder ---> as npmjs package..
+
+/src
