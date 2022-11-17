@@ -21,3 +21,10 @@ now use require module to find those `transpiled javascript files`
     not the typescript where the code was written originally...
 
 ------------------------------------------------------------------------------------------------------------
+
+The following paths are ignored by one of your .gitignore files:
+lib_compiledJs
+
+git check-ignore -v path/to/check
+(or) 
+add !       // important

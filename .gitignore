@@ -1,1 +1,7 @@
 /node_modules
+
+# this folder created when you run package.json ===> last script
+/lib_compiledJs
+
+# this folder created when u run babel thingies in resources folder
+/srcBabel45        

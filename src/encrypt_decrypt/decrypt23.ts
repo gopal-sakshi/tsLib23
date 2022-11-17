@@ -1,7 +1,5 @@
-function decrypt(input:string) {
-    console.log(input);
-    var decryptedInput = atob(input);
-    console.log(decryptedInput);
+function decrypt(input:string) {    
+    var decryptedInput = atob(input);    
     return decryptedInput;
 }
 

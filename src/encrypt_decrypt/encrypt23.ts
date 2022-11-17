@@ -1,7 +1,5 @@
-function encrypt(input:string) {
-    console.log(input);
-    var encryptedInput = btoa(input);
-    console.log(encryptedInput);
+function encrypt(input:string) {    
+    var encryptedInput = btoa(input);    
     return encryptedInput;
 }
 
