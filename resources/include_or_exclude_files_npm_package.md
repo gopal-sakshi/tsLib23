@@ -29,3 +29,4 @@ By default these files/folders wont be part of npmjs package anyway
     .npmrc
     package-lock.json
     node_modules
+----------------------------------------------------------------------------------------------------------------------------------------

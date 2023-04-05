@@ -7,12 +7,32 @@
 // { "presets": ["@babel/preset-env"] }
 
 
-// APPROACH III ===> add multiple official presets
+// Angular, Node, postgres, AWS, MongoDb, docker, jenkins, babel, webpack
+
+// APPROACH III ===> add multiple official presets (default)
+// {
+//     "presets": [
+//         ["@babel/preset-env"],
+//         ["@babel/typescript"]
+//     ]
+// }
+
+// APPROACH IV ===>  add multiple official presets (customised)
 
 {
     "presets": [
-        ["@babel/preset-env"],
+        [
+            "@babel/preset-env", 
+            { 
+                "useBuiltIns": "entry",
+                "corejs": "3.22",
+                "modules": "commonjs"
+            } 
+        ],
         ["@babel/typescript"]
+    ],
+    "plugins": [
+        ["babel-plugin-console-source"]
     ]
 }
 

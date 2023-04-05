@@ -8,7 +8,8 @@ Babel
     It’s the plugins that does the heavy lifting.
 - Each plugin is it’s own NPM library. 
     So for every plugin you want to install, you have to install a new NPM library 
-
+- For a list of helpful plugins, see
+    https://github.com/babel/awesome-babel
 
 Presets
 - Instead of adding each plugin one by one...
@@ -21,21 +22,36 @@ Presets
 
 
 @babel/preset-typescript ===> recommended if you use TypeScript; You will need to specify --extensions ".ts"
-@babel/preset-env ====> all plugins you need to transpile all ES6 features!
+@babel/preset-env ====> 
+    all plugins you need to transpile all ES6 features!
+    transforms based on the specified <environment> (browsers, node, electron).
 ------------------------------------------------------------------------------------------------------------------------------
+use <babel.config.json>
+    You are using a monorepo
+    You want to compile node_modules
+<babelrc>
+    You have a configuration that only applies to a single part of your project
+<babel> property in package.json
+    
+------------------------------------------------------------------------------------------------------------------------------
+`without using .babelrc`            
+./node_modules/.bin/babel srcBabel44/babel2.js
+    see the output... arrow functions wont get transformed (coz, we didnt use plugins)
 
-(A) add a script file in package.json
-(B) run from node_modules
-    `./node_modules/.bin/babel srcBabel44/local_test_babel1.js`
-(C) run with plugins & stuff
-    transforms js file (which has arrow functions) into another js file which is ES2015 compatible
-    `./node_modules/.bin/babel srcBabel44/local_test_babel2.js --out-file srcBabel45/local_test_babel2_output1.js --plugins=@babel/plugin-transform-arrow-functions`
-(C1) instead of providing plugins in cli, you can add .babelrc file... add plugins property there
-    `./node_modules/.bin/babel srcBabel44/local_test_babel2.js --out-file srcBabel45/local_test_babel2_output2.js`
-(D) transforms all files within srcBabel44 folder ---> outputs into srcBabel45 folder
-    `./node_modules/.bin/babel srcBabel44 --out-dir srcBabel45 --plugins=@babel/plugin-transform-arrow-functions`
-(E) generate a single js for all files
-    `./node_modules/.bin/babel srcBabel44 --out-file srcBabel45/singleFile.js`
+./node_modules/.bin/babel srcBabel44/babel2.js --plugins=@babel/plugin-transform-arrow-functions
+    see the output... arrow functions will be transformed we used plugins
+
+./node_modules/.bin/babel srcBabel44/babel2.js --out-file srcBabel45/babel2a.js --plugins=@babel/plugin-transform-arrow-functions
+    output wont be logged to console
+    a newFile "babel2a.js" will be created 
+
+
+`using .babelrc`                <rename .babelrc_backup to .babelrc>
+./node_modules/.bin/babel srcBabel44 --out-dir srcBabel45
+    all files in <srcBabel44> will be transpiled into destination folder <srcBabel45>
+./node_modules/.bin/babel srcBabel44 --out-file srcBabel45/singleFile23.js
+    generate a singleJs for all input files
+    
 
 Note: 
 - we can use --out-dir or -d
@@ -54,5 +70,4 @@ Transformations
 - come in the form of plugins, 
 - which are small JavaScript programs 
 - that instruct Babel on how to carry out transformations to the code
-
-
+-------------------------------------------------------------------------------------------------------------------------------

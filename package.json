@@ -10,7 +10,8 @@
         "generate_d.ts": "tsc --emitDeclarationOnly",
         "readMe_1": "generate_d.ts will only generate ====> .d.ts files ====> bcoz emitDeclarationOnly; declartion:true must be set in tsconfig.json",
         "2--": "----------------------------------------------------------------------------------------------------------------",
-        "babel23": "babel src -d lib_compiledJs --extensions \".ts\"",
+        "babel23": "babel src -d dist_babel23 --extensions \".ts\"",
+        "tsc23": "tsc",
         "readMe_2": "this script will generate .js files for all corresponding .d.ts files",
         "3--": "----------------------------------------------------------------------------------------------------------------",
         "tsc_with_d_and_babel23": "npm run generate_d.ts && npm run babel23"
@@ -27,6 +28,14 @@
         "@babel/cli": "^7.19.3",
         "@babel/core": "^7.20.2",
         "@babel/plugin-transform-arrow-functions": "^7.18.6",
-        "@types/node": "^18.11.9"
+        "@types/node": "^18.11.9",
+        "babel-plugin-console-source": "^2.0.5"
+    },
+    "babel23": {
+        "presets": [
+            "@babel/preset-env",
+            "@babel/typescript"
+        ],
+        "plugins": ["@babel/plugin-transform-arrow-functions", "babel-plugin-console-source"]
     }
 }

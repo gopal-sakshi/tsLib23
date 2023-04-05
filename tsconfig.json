@@ -1,12 +1,12 @@
 {
   "compilerOptions": {
-    "target": "es5",                          
-    "module": "commonjs",                     
-    "declaration": true,                   
-    "outDir": "./lib_compiledJs",          
-    "strict": true,                          
-    "esModuleInterop": true,                 
-    "skipLibCheck": true,                    
-    "forceConsistentCasingInFileNames": true
+    "target": "ESNext",
+    "module": "commonjs",
+    "declaration": true,
+    "outDir": "./dist_tsc23",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
   }
 }

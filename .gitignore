@@ -4,6 +4,8 @@
 # for some reason... this is ignored by gitignore... WHY ???????????
 # okay... not its ignored... lib_compiledJs ===> is ignored... it wont be pushed into github anymore
 /lib_compiledJs
+/dist_babel23
+/dist_tsc23
 
 # this folder created when u run babel thingies in resources folder
-/srcBabel45        
+/srcBabel45
